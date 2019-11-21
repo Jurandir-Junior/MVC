@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+}
+
+body {
+    background-color: #21003F;
+}
+
+ul > li > a {
+    text-decoration: none;
+}
+
+#logo {
+    width: 15%;
+}
+
+.topo {
+    width: 100%;
+    text-align: center;
+    background-color: #21003F;
+    color: white;
+}
+
+.topo .logon {
+    float: right;
+    padding-top: 60px;
+    padding-right: 40px;
+}
+
+.topo .bem-vindo {
+    float: left;
+    padding-top: 95px;
+}
+
+.topo li {
+    list-style-type: none;
+}
+
+#logo {
+    width: 15%;
+}
+
+#login {
+    padding: 20px 0;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    background-color: #21003F;
+    padding: 15px 30px;
+}
+
+nav ul > li > a {    
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.button1 {      
+    padding: 17px 80px;
+    background-color: #FFAD00;
+    color: white;
+}
+
+.button2 {
+    padding: 17px 80px;
+    background-color: #F38D18;
+    color: white;
+}
+
+.button3 {
+    padding: 17px 80px;
+    background-color: #BB3B66;
+    color: white;
+}
+
+.button4 {
+    padding: 17px 80px; 
+    background-color: rgb(146, 45, 78);
+    color: white;
+}
+
+.button5 {
+    padding: 17px 80px;
+    background-color: rgb(119, 30, 60);
+    color: white;
+    
+}
+
+.button6 {
+    padding: 17px 80px;
+    background-color: #801D6B;
+    color: white;
+}
+
+.button7 {
+    padding: 4px 7px;
+    font-size: 1.5em;
+    background-color: #FFAD00;
+    color: white;
+}
+
+.button8 {
+    margin: 0 7px;
+    font-size: 1.5em;
+    padding: 4px 7px;
+    background-color: #F38D18;
+    color: white;
+}
+
+.month {
+    padding: 70px 25px;
+    width: 100%;
+    background: #1abc9c;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    background-color: #21003F;
+    color: white;
+    padding: 50px;
+}
+
+  ul {
+      list-style-type: none;
+}
+
+#calendario {
+    padding: 0 500px; 
+}
+
+.month {
+    background-color: #801D6B;
+}
+  
+  .month ul {
+    margin: 0;
+    padding: 0;
+}
+  
+  .month ul li {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+  
+  .month .prev {
+    float: left;
+    padding-top: 10px;
+}
+  
+  .month .next {
+    float: right;
+    padding-top: 10px;
+}
+  
+  .weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color: #ddd;
+}
+  
+  .weekdays li {
+    display: inline-block;
+    width: 13.6%;
+    color: #666;
+    text-align: center;
+}
+  
+  .days {
+    padding: 10px 0;
+    background: #eee;
+    margin: 0;
+}
+  
+  .days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size:12px;
+    color: #777;
+}
+  
+  .days li .active {
+    padding: 5px;
+    background: #1abc9c;
+    color: white !important
+}
+ 
+@media screen and (max-width:720px) {
+    .weekdays li, .days li {width: 13.1%;}
+  }
+  
+  @media screen and (max-width: 420px) {
+    .weekdays li, .days li {width: 12.5%;}
+    .days li .active {padding: 2px;}
+  }
+  
+  @media screen and (max-width: 290px) {
+    .weekdays li, .days li {width: 12.2%;}
+  }

@@ -1,0 +1,9 @@
+.column {
+    float: left;
+    width: 50%;
+}
+
+#column_container {
+    width: 1280px;
+    margin: 100px auto;
+}   

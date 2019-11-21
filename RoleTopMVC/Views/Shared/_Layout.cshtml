@@ -1,0 +1,16 @@
+﻿@{
+    var nomeView = (string) ViewData["NomeView"];
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">    
+    <body>
+        @if("Home".Equals(nomeView))
+        {
+            Html.RenderPartial("_HeaderHomePage");
+        }
+    </header>
+@RenderBody()
+
+</body>
+</html>

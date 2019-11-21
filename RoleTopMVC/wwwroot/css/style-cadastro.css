@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #21003F
+}
+
+main {
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 0 10px;
+}
+
+#button1 {
+    font-size: 1.5em;
+    text-decoration: none;
+    align-self: center;
+    background-color: rgb(146, 45, 78);
+    color: white;
+    padding: 0 5px;
+}
+
+#logo {
+
+    width: 15%
+}
+
+#conta {
+    font-size: 1.5em;
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+}
+
+#conta > a {
+    color: white;
+}
+
+#menus {
+    background-color: #801D6B;
+    text-align: center;
+    font-size: 1.5em;
+    color: white;
+    padding: 0 50px 10px 50px;
+}
+
+#menus > h2 {
+    font-size: 30px;
+}
+
+form label {
+    font-size: 90%;
+    color: white;
+    margin: 30px;
+}
+
+form input[type="submit"] {
+    color: white;
+    background-color: #F38D18;
+    margin: 20px 0;
+    padding: 5px;
+    text-align: center;
+    font-size: 0.6em;    
+}
+
+form input, form select {
+    width: 100%;
+    height: 25px;
+    border: none;
+    text-align: left;
+    padding: 0 2px;
+}  
+
+footer {
+    background-color: #21003F;
+    text-align: center;
+    color: white;
+}

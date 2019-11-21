@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #21003F;
+    color: white;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    height: 400px;
+}
+
+.evento {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2em;
+}

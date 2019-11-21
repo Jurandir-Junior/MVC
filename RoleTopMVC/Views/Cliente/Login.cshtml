@@ -1,0 +1,29 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="~/css/style-login.css">
+</head>
+<main>
+        <a asp-controller="Home" asp-action="Index" id="button1">Voltar</a>
+        <section id="conta">
+            <p>Não possui conta?</p>
+            <a href='@Url.Action("Index", "Cadastro")' id="button2">Cadastre-se</a>
+        </section>
+        
+        <section id="menus">
+            <h2>Login</h2>
+            <form method="POST" action='@Url.Action("Login", "Cliente")'>
+                <div>
+                    <label for="email">Email</label>
+                    <br />
+                    <input id="email" type="text" name="email">
+                </div>
+
+                <div>
+                    <label for="senha">Senha</label>
+                    <br />
+                    <input id="senha" type="password" name="senha">
+                </div>
+                
+                <input type="submit" value="Entrar!" />
+            </form>
+        </section>
+    </main>

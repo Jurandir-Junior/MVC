@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>O Local - Rolê Top</title>
+    <link rel="stylesheet" type="text/css" href="css/style-local.css">
+</head>
+<body>
+    <header>
+            <section id="logo-area">
+                    <div class="topo">
+                        <ul>
+                            <li class="bem-vindo">Bem-vindo(a)</li>
+                            <li class="logon">
+                                <ul id="cadastro">
+                                    <li><a href="RolêTop - Cadastro.html" class="button7">Cadastro</a></li>
+                                    <li id="login"><a href="#" class="button8">Login</a></li>
+                                </ul></li>
+                        </ul>            
+                        <img id="logo" src="img/logo.png" title="Logo Rolê Top">            
+                    </div>            
+                </section>
+        <nav>
+            <ul id="buttons">
+                <li><a href="RolêTop - Início.html" class="button1">Início</a></li>
+                <li><a href="#" class="button2">O Local</a></li>
+                <li><a href="RolêTop - Criação de Evento.html" class="button3">Crie seu evento</a></li>
+                <li><a href="RolêTop - Eventos Feitos.html" class="button4">Eventos Feitos</a></li>
+                <li><a href="RolêTop - Calendário.html" class="button5">Calendário</a></li>
+                <li><a href="RolêTop - Contato.html" class="button6">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+            <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="RolêTop - O Local.html#local" class="sidenav1">Local</a>
+                    <a href="RolêTop - O Local.html#estrutura" class="sidenav2">Tamanho e Capacidade</a>
+                    <a href="RolêTop - O Local.html#planta" class="sidenav3">Planta/Mapa de Montagem</a>
+                    <a href="RolêTop - O Local.html#maps" class="sidenav4">Distancia</a>
+                  </div>
+                  
+                  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+                  
+                  <script>
+                  function openNav() {
+                    document.getElementById("mySidenav").style.width = "300px";
+                  }
+                  
+                  function closeNav() {
+                    document.getElementById("mySidenav").style.width = "0";
+                  }
+                  </script>
+
+        <div id="geral">
+            <section id="local">
+                <div>
+                    <h3>Endereço</h3>
+                    <p>Av. Barão de Limeira, 539 - Santa Cecília</p>
+                    <br />
+                    <h3>Ponto de Referência</h3>
+                    <p>Referencia</p>
+                </div>
+            </section>
+            <br />
+            <section id="estrutura">
+                <div>
+                    <h3>Tamanho e Capacidade</h3>
+                    <p>150x40 com capacidade para até 300 pessoas e 200 cadeiras</p>
+                </div>
+            </section>
+            <br />
+            <section id="planta">
+                <div>
+                    <h3>Planta</h3>
+                    <img id="img-planta" src="img/EXPO PDF PB.jpg">
+                    <br />
+                    <h3>Mapa de Montagem</h3>
+                    <img id="img-planta2" src="img/EXPO PDF COLOR.jpg">
+                </div>
+            </section>
+            <br />
+            <section id="maps">
+                <div>
+                    <h3>Como Chegar</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.886996150563!2d-46.64847708502264!3d-23.53656648469521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5843deade6e3%3A0x124f377d06c7e71f!2sAlameda%20Bar%C3%A3o%20de%20Limeira%2C%20539%20-%20Campos%20El%C3%ADseos%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001202-001!5e0!3m2!1spt-BR!2sbr!4v1568035137174!5m2!1spt-BR!2sbr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+</body>
+</html>

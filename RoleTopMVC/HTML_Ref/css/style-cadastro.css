@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #21003F
+}
+
+main {
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 0 10px;
+}
+
+#button1 {
+    text-decoration: none;
+    align-self: center;
+    background-color: white;
+    color: black;
+    padding: 0 5px;
+}
+
+#logo {
+
+    width: 15%
+}
+
+#conta {
+    font-size: 1.5em;
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+}
+
+#conta > a {
+    color: white;
+}
+
+#menus {
+    background-color: #801D6B;
+    text-align: center;
+    font-size: 1.5em;
+    color: white;
+    padding: 0 50px 5px 50px;
+}
+
+#menus h2 {
+    margin: 5px 0 5px 0;
+}
+
+#name {
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 10px 5px;
+}
+
+#usuario {
+    margin: 0 15px 10px -11px;
+    padding: 4px 0;
+}
+
+#password {
+    display: flex;
+    flex-direction: row;    
+    margin: 5px 0 10px 5px;
+}
+
+#e-mail {
+    display: flex;
+    flex-direction: row;
+    margin: 5px 0 10px 6px;
+}
+
+#cpf {
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 5px 10px;
+    padding: 4px 0;
+}
+
+#telefone {
+    margin: 0 0 15px 8px;
+    padding: 4px 0;
+}
+
+#lista {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+label {
+    color: white;
+}
+
+#button3 {
+    color: white;
+    text-decoration: none;
+    background-color: #F38D18;
+    padding: 5px;
+}
+
+form {    
+    margin: 5px;
+}

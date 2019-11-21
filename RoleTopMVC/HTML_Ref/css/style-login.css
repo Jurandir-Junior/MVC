@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #21003F
+}
+
+main {
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 0 10px;
+}
+
+#button1 {
+    text-decoration: none;
+    font-size: 1.5em;
+    align-self: center;
+    background-color: white;
+    color: black;
+    padding: 0 5px;
+}
+
+#logo {
+
+    width: 15%
+}
+
+#conta {
+    font-size: 1.5em;
+    text-align: center;
+    color: white;
+    padding: 20px 0;
+}
+
+#conta > a {
+    color: white;
+}
+
+#menus {
+background-color: #801D6B;
+font-size: 1.5em;
+text-align: center;
+color: white;
+padding: 10px 30px 20px 30px;
+}
+
+#menus h2 {
+    margin: 5px 0 5px 0;
+}
+
+#usuario {    
+    margin: 0 12px 10px 0;
+}
+
+#password {
+    margin: 0 5px 15px 16px;
+}
+
+#button3 {
+    color: white;
+    text-decoration: none;
+    background-color: #F38D18;
+    padding: 5px;
+}
+
+form {
+    margin: 5px;
+}

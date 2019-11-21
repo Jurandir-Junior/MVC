@@ -1,0 +1,57 @@
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/style-cadastro.css">
+    </head>
+    <main>
+        <a asp-controller="Home" asp-action="Index" id="button1">Voltar</a>
+        <section id="conta">
+                <p>Já possui conta?</p>
+                <a asp-controller="Cliente" asp-action="Login" id="button2">Login</a>
+        </section>
+
+            <hr />
+        <section id="menus">
+            <h2>Cadastro</h2>
+            <form method="POST" action='@Url.Action("CadastrarCliente", "Cadastro")'>
+                <div id="lista">
+                    <div id="name">
+                        <label for="nome">Nome</label>
+                        <br />
+                        <input id="nome" type="text" name="nome"/> 
+                    </div>                    
+                    <div id="password">
+                        <label for="senha">Senha</label>
+                        <br />
+                        <input id="senha" type="password" name="senha"/>
+                    </div>
+                    <div id="e-mail">
+                        <label for="email">Email</label>
+                        <br />
+                        <input id="email" type="email" name="email"/>
+                    </div>
+                    <div id="cpf">
+                        <label for="cpf">CPF</label>
+                        <br />
+                        <input id="cpf" type="number" name="cpf"/>
+                    </div>
+                    <div>
+                        <label for="endereco">Endereço</label>
+                        <br />
+                        <input id="endereco" type="text" name="endereco"/>
+                    </div>
+                    <div>
+                        <label for="telefone">Telefone</label>
+                        <br />
+                        <input id="telefone" type="tel" name="telefone"/>
+                    </div>
+                    <div>
+                        <label for="data-nascimento">Data de Nascimento</label>
+                        <br />
+                        <input id="data-nascimento" type="date" name="data-nascimento">
+                    </div>
+                    
+                        <input type="submit" value="Confirmar" />
+                    
+                </div>
+            </form>                
+        </section>
+    </main>
