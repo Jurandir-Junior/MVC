@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.IO;
 using McBonaldsMVC.Models;
 
-namespace McBonaldsMVCatualizado.Repositories
+namespace McBonaldsMVC.Repositories
 {
     public class HamburguerRepository
     {

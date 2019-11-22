@@ -1,11 +1,10 @@
 using System;
 using McBonaldsMVC.Models;
 using McBonaldsMVC.ViewModels;
-using McBonaldsMVCatualizado;
-using McBonaldsMVCatualizado.Repositories;
+using McBonaldsMVC;
+using McBonaldsMVC.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-
 
 namespace McBonaldsMVC.Controllers
 {

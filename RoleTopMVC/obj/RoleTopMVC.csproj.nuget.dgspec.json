@@ -1,28 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Junior\\Documents\\Aulas SENAI\\C-Sharp\\Hello\\RoleTopMVC\\RoleTopMVC.csproj": {}
+    "C:\\Users\\51855643855\\Documents\\MVC\\RoleTopMVC\\RoleTopMVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Junior\\Documents\\Aulas SENAI\\C-Sharp\\Hello\\RoleTopMVC\\RoleTopMVC.csproj": {
+    "C:\\Users\\51855643855\\Documents\\MVC\\RoleTopMVC\\RoleTopMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Junior\\Documents\\Aulas SENAI\\C-Sharp\\Hello\\RoleTopMVC\\RoleTopMVC.csproj",
+        "projectUniqueName": "C:\\Users\\51855643855\\Documents\\MVC\\RoleTopMVC\\RoleTopMVC.csproj",
         "projectName": "RoleTopMVC",
-        "projectPath": "C:\\Users\\Junior\\Documents\\Aulas SENAI\\C-Sharp\\Hello\\RoleTopMVC\\RoleTopMVC.csproj",
-        "packagesPath": "C:\\Users\\Junior\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Junior\\Documents\\Aulas SENAI\\C-Sharp\\Hello\\RoleTopMVC\\obj\\",
+        "projectPath": "C:\\Users\\51855643855\\Documents\\MVC\\RoleTopMVC\\RoleTopMVC.csproj",
+        "packagesPath": "C:\\Users\\51855643855\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\51855643855\\Documents\\MVC\\RoleTopMVC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Junior\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\51855643855\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

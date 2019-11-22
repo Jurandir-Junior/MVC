@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\Junior\\Documents\\Aulas SENAI\\C-Sharp\\Hello\\RoleTopMVC\\RoleTopMVC.csproj",
+  "FilePath": "c:\\Users\\51855643855\\Documents\\MVC\\RoleTopMVC\\RoleTopMVC.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-2.1",
     "LanguageVersion": "2.1",
@@ -3018,6 +3018,11 @@
     {
       "FilePath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "Views\\Pedido\\Pedido.cshtml",
+      "TargetPath": "Views\\Pedido\\Pedido.cshtml",
       "FileKind": "mvc"
     }
   ],
