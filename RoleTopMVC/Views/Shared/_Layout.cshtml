@@ -9,8 +9,41 @@
         {
             Html.RenderPartial("_HeaderHomePage");
         }
+    <header>
+            <section id="logo-area">
+                    <div class="topo">
+                        <ul>
+                            <li class="bem-vindo">Bem-vindo(a)</li>
+                            <li class="logon">
+                                <ul id="cadastro">
+                                    <li><a asp-controller="Cadastro" asp-action="Index" class="button7">Cadastro</a></li>
+                                    <li id="login"><a asp-controller="Cliente" asp-action="Login" class="button8">Login</a></li>
+                                </ul></li>
+                        </ul>            
+                        <img id="logo" src="img/logo.png" title="Logo Rolê Top">            
+                    </div>            
+                </section>
+        <nav>
+            <ul id="buttons">
+                <li><a asp-controller="Home" asp-action="Index" class="button1">Início</a></li>
+                <li><a asp-controller="Local" asp-action="Index" class="button2">O Local</a></li>
+                <li><a asp-controller="Pedido" asp-action="Index" class="button3">Crie seu evento</a></li>
+                <li><a asp-controller="Eventos" asp-action="Index" class="button4">Eventos Feitos</a></li>
+                <li><a asp-controller="Calendario" asp-action="Index" class="button5">Calendário</a></li>
+                <li><a asp-controller="Contato" asp-action="Index" class="button6">Contato</a></li>
+            </ul>
+        </nav>
     </header>
 @RenderBody()
-
+    <footer>
+        <div class="section-container">
+            <address>
+                Avenida de Limeira, 539 - Campos Elíseos - SP
+                <br />
+                roletopeventos@gmail.com
+            </address>
+            <a href="#">Voltar para o topo!</a>
+        </div>
+    </footer>
 </body>
 </html>

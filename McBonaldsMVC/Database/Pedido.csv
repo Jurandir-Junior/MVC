@@ -1,2 +1,3 @@
 cliente_nome=Henrique O DONO;cliente_endereco=rua capitão servio;cliente_telefone=11 545595252;cliente_email=hbncod@gmail.com;hamburguer_nome=Furioso;hamburguer_preco=9,99;shake_nome=Biscoito;shake_preco=9,99;data_pedido=21/11/2019 11:03:06;preco_total=19,98
 cliente_nome=Junior;cliente_endereco=Rua Um;cliente_telefone=11 1234-5678;cliente_email=juno@email.com;hamburguer_nome=Furioso;hamburguer_preco=9,99;shake_nome=Chocolate;shake_preco=12,99;data_pedido=22/11/2019 09:19:23;preco_total=22,98
+cliente_nome=Junior;cliente_endereco=Rua Um;cliente_telefone=11 1234-5678;cliente_email=juno@email.com;hamburguer_nome=Hamburguer da Lais;hamburguer_preco=27,99;shake_nome=Chocolate;shake_preco=12,99;data_pedido=22/11/2019 10:58:38;preco_total=40,98

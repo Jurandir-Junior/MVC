@@ -6,9 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace McBonaldsMVC.Controllers
 {
-    public class ClienteController : Controller
+    public class ClienteController : AbstractController
     {
-        private const string SESSION_CLIENTE_EMAIL = "email_Cliente";
         private ClienteRepository clienteRepository = new ClienteRepository();
 
         private PedidoRepository pedidoRepository = new PedidoRepository();
@@ -40,7 +39,7 @@ namespace McBonaldsMVC.Controllers
                     if(cliente.Senha.Equals(senha))
                     {
                         HttpContext.Session.SetString(SESSION_CLIENTE_EMAIL, usuario); // HttpContext.Session == nela você guarda as coisas q ficarão visiveis aos outros controllers
-                        HttpContext.Session.SetString("SESSION_CLIENTE_NOME",cliente.Nome);
+                        HttpContext.Session.SetString(SESSION_CLIENTE_NOME, cliente.Nome);
                         return RedirectToAction("Historico","Cliente");  //RedirectToAction chama outro método, no caso Historico q está dentro do controller Cliente mesmo;
                     }
                     else{
@@ -61,7 +60,7 @@ namespace McBonaldsMVC.Controllers
         }
         public ActionResult Historico()
         {
-            var emailCliente =HttpContext.Session.GetString(SESSION_CLIENTE_EMAIL);
+            var emailCliente = ObterUsuarioSession();
 
             var pedidos = pedidoRepository.ObterTodosPorCliente(emailCliente);
             

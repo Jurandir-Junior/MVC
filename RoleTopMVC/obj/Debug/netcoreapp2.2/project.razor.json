@@ -3021,8 +3021,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "Views\\Pedido\\Pedido.cshtml",
-      "TargetPath": "Views\\Pedido\\Pedido.cshtml",
+      "FilePath": "Views\\Pedido\\Index.cshtml",
+      "TargetPath": "Views\\Pedido\\Index.cshtml",
       "FileKind": "mvc"
     }
   ],
