@@ -1,70 +1,71 @@
 using System;
 using McBonaldsMVC.Repositories;
+using McBonaldsMVC.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using McBonaldsMVC.ViewModels;
-using McBonaldsMVC;
 
 namespace McBonaldsMVC.Controllers
 {
-    
     public class ClienteController : Controller
     {
-
-        private const string  SESSION_CLIENTE_EMAIL = "email_cliente";
+        private const string SESSION_CLIENTE_EMAIL = "email_Cliente";
         private ClienteRepository clienteRepository = new ClienteRepository();
 
         private PedidoRepository pedidoRepository = new PedidoRepository();
+
         [HttpGet]
         public IActionResult Login()
         {
             return View();
         }
+
         [HttpPost]
         public IActionResult Login(IFormCollection form)
         {
             ViewData["Action"] = "Login";
-            try{
-            System.Console.WriteLine("=====================");
-            System.Console.WriteLine(form["email"]);
-            System.Console.WriteLine(form["senha"]);
-            System.Console.WriteLine("=====================");
-
-            var usuario = form["email"];
-            var senha = form["senha"];
-
-            var cliente = clienteRepository.ObterPor(usuario);
-
-            if(cliente != null)
+            try
             {
-                if(cliente.Senha.Equals(senha))
-                {
-                    HttpContext.Session.SetString("SESSION_CLIENTE_EMAIL", usuario);
-                    HttpContext.Session.SetString("SESSION_CLIENTE_NOME", cliente.Nome);
-                    return RedirectToAction("Historico", "Cliente");
-                } else {
-                    return View("Erro", new RespostaViewModel("Senha incorreta"));
-                }
-            } else {
-                return View("Erro", new RespostaViewModel($"Usuário {usuario} não foi encontrado"));
-            }
-            
+                System.Console.WriteLine("=========aaaa=========");
+                System.Console.WriteLine(form["email"]);
+                System.Console.WriteLine(form["senha"]);
+                System.Console.WriteLine("===========bbbb=======");
 
-            
-            } catch(Exception e)
+                var usuario = form["email"];
+                var senha = form["senha"];
+
+                var cliente = clienteRepository.ObterPor(usuario);
+                
+                if (cliente != null)
+                {
+                    if(cliente.Senha.Equals(senha))
+                    {
+                        HttpContext.Session.SetString(SESSION_CLIENTE_EMAIL, usuario); // HttpContext.Session == nela você guarda as coisas q ficarão visiveis aos outros controllers
+                        HttpContext.Session.SetString("SESSION_CLIENTE_NOME",cliente.Nome);
+                        return RedirectToAction("Historico","Cliente");  //RedirectToAction chama outro método, no caso Historico q está dentro do controller Cliente mesmo;
+                    }
+                    else{
+                        return View("Erro",new RespostaViewModel("Senha incorreta"));
+                    }
+                }
+                else
+                {
+                                                                //abaixo entre as () está sendo enviada a mensagem para a variavel "mensagem" do RespostaViewModel
+                    return View("Erro", new RespostaViewModel($"Usuário {usuario} não foi encontrado")); //mostrar q o usuario está errado 
+                }
+            }
+            catch (Exception e)
             {
                 System.Console.WriteLine(e.StackTrace);
                 return View("Erro");
             }
         }
-
-        public IActionResult Historico()
+        public ActionResult Historico()
         {
-            var emailCliente = HttpContext.Session.GetString(SESSION_CLIENTE_EMAIL);
-            var pedidos = pedidoRepository.ObterTodosPorCliente(emailCliente);
+            var emailCliente =HttpContext.Session.GetString(SESSION_CLIENTE_EMAIL);
 
-            return View(new HistoricoViewModel()
-            {
+            var pedidos = pedidoRepository.ObterTodosPorCliente(emailCliente);
+            
+            return View(new HistoricoViewModel() {
                 Pedidos = pedidos
             });
         }

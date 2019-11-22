@@ -6,7 +6,6 @@ namespace McBonaldsMVC.Models
         {
 
         }
-
         public Shake(string nome, double preco)
         {
             this.Nome = nome;
