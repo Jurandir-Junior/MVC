@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #21003F;    
+}
+
+
+ul > li > a {
+    text-decoration: none;
+}
+
+#logo {
+    width: 15%;
+}
+
+.topo {
+    width: 100%;
+    text-align: center;
+    background-color: #21003F;
+    color: white;
+}
+
+.topo .logon {
+    float: right;
+    padding-top: 60px;
+    padding-right: 40px;
+}
+
+.topo .bem-vindo {
+    float: left;
+    padding-top: 95px;
+}
+
+.topo li {
+    list-style-type: none;
+}
+
+#logo {
+    width: 15%;
+}
+
+#login {
+    padding: 20px 0;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    background-color: #21003F;
+    padding: 20px 30px;
+}
+
+nav ul > li > a {    
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    background-color: #21003F;
+    color: white;
+    font-size: 1.5em;
+}
+
+.button1 {      
+    padding: 17px 80px;
+    background-color: #FFAD00;
+    color: white;
+}
+
+.button2 {
+    padding: 17px 80px;
+    background-color: #F38D18;
+    color: white;
+}
+
+.button3 {
+    padding: 17px 80px;
+    background-color: #BB3B66;
+    color: white;
+}
+
+.button4 {
+    padding: 17px 80px; 
+    background-color: rgb(146, 45, 78);
+    color: white;
+}
+
+.button5 {
+    padding: 17px 80px;
+    background-color: rgb(119, 30, 60);
+    color: white;
+    
+}
+
+.button6 {
+    padding: 17px 80px;
+    background-color: #801D6B;
+    color: white;
+}
+
+.button7 {
+    padding: 4px 7px;
+    font-size: 1.5em;
+    background-color: #FFAD00;
+    color: white;
+}
+
+.button8 {
+    margin: 0 7px;
+    font-size: 1.5em;
+    padding: 4px 7px;
+    background-color: #F38D18;
+    color: white;
+}
+
+#local {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+
+#local > div {
+    background: #801D6B;
+    padding: 10px;
+}
+
+#local > div > h3 {
+    background: #801D6B;
+    padding: 0 0 20px 0;
+}
+
+#local > div > p {
+    background: #801D6B;
+    padding: 0 0 20px 0;
+}
+
+#estrutura {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;    
+}
+
+#estrutura > div {
+    background: #801D6B;
+    padding: 10px;
+}
+
+#estrutura > div > h3 {
+    background: #801D6B;
+    padding: 0 0 20px 0;
+}
+
+#estrutura > div > p {
+    background: #801D6B;
+    padding: 0 0 20px 0;
+}
+
+#planta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 1500px 500px;
+}
+
+#planta > div {
+    padding: 10px;
+    text-align: center;
+}
+
+#planta > div > h3 {
+    margin: 70px 800px;
+    background-color: #801D6B;
+}
+
+#planta > div > img {
+    width: 20%;
+}
+
+#img-planta2 {
+    padding: 0 0 500px 0;
+}
+
+#maps {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 10px;    
+}
+
+#maps > div > h3 {
+    background-color: #801D6B;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0 200px;
+}
+
+footer {
+    background-color: #21003F;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #FFAD00;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    background-color: #FFAD00;
+  }
+
+  .sidenav1 {
+      background-color: #F9C559;
+      direction: rtl;
+  }
+
+  .sidenav2 {
+      background-color: #F9CD70;
+      direction: rtl;
+  }
+
+  .sidenav3 {
+      background-color: #FCDA91;
+      direction: rtl;
+  }
+
+  .sidenav4 {
+      background-color: #F9E2AF;
+      direction: rtl;
+  }
+
+  @media (max-width: 1200px) {
+      
+  }

@@ -83,7 +83,6 @@ C:\Users\51855643855\Documents\MVC\RoleTopMVC\obj\Debug\netcoreapp2.2\Razor\View
 C:\Users\51855643855\Documents\MVC\RoleTopMVC\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index.g.cshtml.cs
 C:\Users\51855643855\Documents\MVC\RoleTopMVC\obj\Debug\netcoreapp2.2\Razor\Views\Home\Privacy.g.cshtml.cs
 C:\Users\51855643855\Documents\MVC\RoleTopMVC\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Erro.g.cshtml.cs
-C:\Users\51855643855\Documents\MVC\RoleTopMVC\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Error.g.cshtml.cs
 C:\Users\51855643855\Documents\MVC\RoleTopMVC\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Sucesso.g.cshtml.cs
 C:\Users\51855643855\Documents\MVC\RoleTopMVC\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
 C:\Users\51855643855\Documents\MVC\RoleTopMVC\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_HeaderHomePage.g.cshtml.cs
@@ -97,3 +96,7 @@ C:\Users\51855643855\Documents\MVC\RoleTopMVC\obj\Debug\netcoreapp2.2\RoleTopMVC
 C:\Users\51855643855\Documents\MVC\RoleTopMVC\obj\Debug\netcoreapp2.2\RoleTopMVC.dll
 C:\Users\51855643855\Documents\MVC\RoleTopMVC\obj\Debug\netcoreapp2.2\RoleTopMVC.pdb
 C:\Users\51855643855\Documents\MVC\RoleTopMVC\obj\Debug\netcoreapp2.2\RoleTopMVC.csproj.CopyComplete
+C:\Users\51855643855\Documents\MVC\RoleTopMVC\obj\Debug\netcoreapp2.2\Razor\Views\Contato\Index.g.cshtml.cs
+C:\Users\51855643855\Documents\MVC\RoleTopMVC\obj\Debug\netcoreapp2.2\Razor\Views\Pedido\Index.g.cshtml.cs
+C:\Users\51855643855\Documents\MVC\RoleTopMVC\obj\Debug\netcoreapp2.2\Razor\Views\Eventos\Index.g.cshtml.cs
+C:\Users\51855643855\Documents\MVC\RoleTopMVC\obj\Debug\netcoreapp2.2\Razor\Views\Local\Index.g.cshtml.cs

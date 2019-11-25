@@ -104,3 +104,4 @@ C:\Users\51855643855\Documents\MVC\McBonaldsMVC\obj\Debug\netcoreapp2.2\McBonald
 C:\Users\51855643855\Documents\MVC\McBonaldsMVC\obj\Debug\netcoreapp2.2\McBonaldsMVC.dll
 C:\Users\51855643855\Documents\MVC\McBonaldsMVC\obj\Debug\netcoreapp2.2\McBonaldsMVC.pdb
 C:\Users\51855643855\Documents\MVC\McBonaldsMVC\obj\Debug\netcoreapp2.2\McBonaldsMVC.csproj.CopyComplete
+C:\Users\51855643855\Documents\MVC\McBonaldsMVC\obj\Debug\netcoreapp2.2\Razor\Views\Administrador\Dashboard.g.cshtml.cs
