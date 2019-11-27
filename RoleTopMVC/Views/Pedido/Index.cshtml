@@ -12,11 +12,11 @@
         <section id="menus">
             <br />
             <h2>Crie seu Evento</h2>
-            <form method="GET" action="dashboard.html">
+            <form method="POST" action='@Url.Action("Registrar", "Pedido")'>
                 <br />
                 <div id="lista">    
                     <div>
-                        <label for="nome">Nome do Evento :</label>
+                        <label for="nome">Nome do Evento </label>
                         <input id="nome" type="text">
                     </div>
                     <div>
@@ -44,11 +44,12 @@
                             <input id="hora2" type="time">
                         </div>
                     </div>
-                    
                     <div>
                         <label for="descriçao">Descreva seu evento</label>
                         <input id="descriçao" type="text">
                     </div>
+                    
+                    <input type="submit" value="Enviar"/>
                 </div>
             
             </form>

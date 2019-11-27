@@ -1,14 +1,8 @@
     <head>
         <link rel="stylesheet" type="text/css" href="css/style-cadastro.css">
+        <link rel="stylesheet" type="text/css" href="css/style-nav.css">
     </head>
     <main>
-        <a asp-controller="Home" asp-action="Index" id="button1">Voltar</a>
-        <section id="conta">
-                <p>Já possui conta?</p>
-                <a asp-controller="Cliente" asp-action="Login" id="button2">Login</a>
-        </section>
-
-            <hr />
         <section id="menus">
             <h2>Cadastro</h2>
             <form method="POST" action='@Url.Action("CadastrarCliente", "Cadastro")'>

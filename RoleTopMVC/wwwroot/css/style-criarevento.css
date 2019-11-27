@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+
+body {
+    background-color: #21003F;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+#menus {    
+    background-color: #801D6B;
+    font-size: 1.5em;
+    padding: 0 10px 10px;
+    margin: 150px 5px;
+    height: 400px;
+}
+
+#menus > h2 {
+    text-align: center;
+}
+
+.horaevento {
+    display: flex;
+    flex-direction: row;
+}
+
+.dataevento {
+    display: flex;
+    flex-direction: row;
+}
+
+#lista > div {
+    padding: 10px 5px;
+}
+
+input {
+    padding: 5px;
+}
+
+form input[type="submit"] {
+    color: white;
+    background-color: #F38D18;
+    padding: 5px;
+    text-align: center;
+    font-size: 0.6em;    
+}

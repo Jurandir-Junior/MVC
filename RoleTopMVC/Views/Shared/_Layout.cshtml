@@ -3,12 +3,14 @@
 }
 
 <!DOCTYPE html>
-<html lang="pt-br">    
-    <body>
-        @if("Home".Equals(nomeView))
-        {
-            Html.RenderPartial("_HeaderHomePage");
-        }
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="~/css/style-nav.css">
+    </head>  
+    <body>        
     <header>
             <section id="logo-area">
                     <div class="topo">
@@ -20,7 +22,7 @@
                                     <li id="login"><a asp-controller="Cliente" asp-action="Login" class="button8">Login</a></li>
                                 </ul></li>
                         </ul>            
-                        <img id="logo" src="img/logo.png" title="Logo Rolê Top">            
+                        <img id="logo" src="~/img/logo.png" title="Logo Rolê Top">
                     </div>            
                 </section>
         <nav>

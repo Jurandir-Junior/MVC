@@ -14,36 +14,16 @@ main {
     justify-content: center;
     align-items: center;    
 }
-
+/*
 header {
     display: flex;
     justify-content: space-between;
     padding: 0 0 0 10px;
 }
-
-#button1 {
-    text-decoration: none;
-    font-size: 1.5em;
-    align-self: center;
-    background-color: rgb(146, 45, 78);
-    color: white;
-    padding: 0 5px;
-}
+*/
 
 #logo {
-
     width: 15%
-}
-
-#conta {
-    font-size: 1.5em;
-    text-align: center;
-    color: white;
-    padding: 20px 0;
-}
-
-#conta > a {
-    color: white;
 }
 
 #menus {

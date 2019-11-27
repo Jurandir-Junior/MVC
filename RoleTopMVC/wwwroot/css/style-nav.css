@@ -1,164 +1,161 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    background-color: #21003F;    
+    box-sizing: border-box;        
 }
 
+nav {
+    background-color: #21003F;
+}
 
-main {
+ul > li > a {
+    text-decoration: none;
+}
+
+#logo {
+    width: 15%;
+}
+
+.topo {
+    width: 100%;
+    text-align: center;
     background-color: #21003F;
     color: white;
+}
+
+.topo .logon {
+    float: right;
+    padding-top: 60px;
+    padding-right: 40px;
+}
+
+.topo .bem-vindo {
+    float: left;
+    padding-top: 95px;
+}
+
+.topo li {
+    list-style-type: none;
+}
+
+#logo {
+    width: 15%;
+}
+
+#login {
+    padding: 20px 0;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
     font-size: 1.5em;
+    background-color: #21003F;
+    padding: 15px 30px;
 }
 
-#local {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 400px;
+nav ul > li > a {    
+    text-decoration: none;
+    font-weight: bold;
 }
 
-#local > div {
-    background: #801D6B;
-    padding: 10px;
+.button1 {      
+    padding: 17px 80px;
+    background-color: #FFAD00;
+    color: white;
 }
 
-#local > div > h3 {
-    background: #801D6B;
-    padding: 0 0 20px 0;
+.button2 {
+    padding: 17px 80px;
+    background-color: #F38D18;
+    color: white;
 }
 
-#local > div > p {
-    background: #801D6B;
-    padding: 0 0 20px 0;
+.button3 {
+    padding: 17px 80px;
+    background-color: #BB3B66;
+    color: white;
 }
 
-#estrutura {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 200px;    
+.button4 {
+    padding: 17px 80px; 
+    background-color: rgb(146, 45, 78);
+    color: white;
 }
 
-#estrutura > div {
-    background: #801D6B;
-    padding: 10px;
+.button5 {
+    padding: 17px 80px;
+    background-color: rgb(119, 30, 60);
+    color: white;
+    
 }
 
-#estrutura > div > h3 {
-    background: #801D6B;
-    padding: 0 0 20px 0;
-}
-
-#estrutura > div > p {
-    background: #801D6B;
-    padding: 0 0 20px 0;
-}
-
-#planta {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 1500px 500px;
-}
-
-#planta > div {
-    padding: 10px;
-    text-align: center;
-}
-
-#planta > div > h3 {
-    margin: 70px 800px;
+.button6 {
+    padding: 17px 80px;
     background-color: #801D6B;
+    color: white;
 }
 
-#planta > div > img {
-    width: 20%;
+.button7 {
+    padding: 4px 7px;
+    font-size: 1.5em;
+    background-color: #FFAD00;
+    color: white;
 }
 
-#img-planta2 {
-    padding: 0 0 500px 0;
-}
-
-#maps {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 10px;    
-}
-
-#maps > div > h3 {
-    background-color: #801D6B;
-    text-align: center;
-    padding: 10px 0;
-    margin: 0 200px;
+.button8 {
+    margin: 0 7px;
+    font-size: 1.5em;
+    padding: 4px 7px;
+    background-color: #F38D18;
+    color: white;
 }
 
 footer {
     background-color: #21003F;
+    text-align: center;
+    color: white;
 }
 
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #FFAD00;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
+@media screen and (max-width: 1680px) {
 
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: black;
-    display: block;
-    transition: 0.3s;
-}
+    .button1 {
+        padding: 15px 50px;
+    }
 
-.sidenav a:hover {
-    color: #f1f1f1;
-}
+    .button2 {
+        padding: 15px 50px;
+    }
 
-.openbtn {
-    position: fixed;
-}
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-    background-color: #FFAD00;
-}
+    .button3 {
+        padding: 15px 50px;
+    }
 
-.sidenav1 {
-    background-color: #F9C559;
-    direction: rtl;
-}
+    .button4 {
+        padding: 15px 50px;
+    }
 
-.sidenav2 {
-    background-color: #F9CD70;
-    direction: rtl;
-}
+    .button5 {
+        padding: 15px 50px;
+    }
 
-.sidenav3 {
-    background-color: #FCDA91;
-    direction: rtl;
-}
+    .button6 {
+        padding: 15px 50px;
+    }
 
-.sidenav4 {
-    background-color: #F9E2AF;
-    direction: rtl;
+    .button7 {
+        padding: 3px 5px;
+    }
+
+    .button8 {
+        padding: 3px 5px;
+        margin: 0 3px;
+    }
+
 }
 
 @media screen and (max-width: 1320px) {
@@ -350,5 +347,9 @@ footer {
 
     .bem-vindo {
         display: none;
+    }
+
+    #banner {
+        padding: 7px;
     }
 }
