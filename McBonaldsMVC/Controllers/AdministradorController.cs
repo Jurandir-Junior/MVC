@@ -10,6 +10,9 @@ namespace McBonaldsMVC.Controllers
         PedidoRepository pedidoRepository = new PedidoRepository();
         public IActionResult Dashboard()
         {
+            var tipoUsuarioSessao = uint.Parse(ObterUsuarioTipoSession());
+            if(tipoUsuarioSessao.Equals((uint) TiposUsuario.ADMINISTRADOR))
+            {
             var pedidos = pedidoRepository.ObterTodos();
             DashboardViewModel dashboardViewModel = new DashboardViewModel();
             
@@ -33,6 +36,13 @@ namespace McBonaldsMVC.Controllers
             dashboardViewModel.UsuarioEmail = ObterUsuarioSession();
 
             return View(dashboardViewModel);
+            }
+
+            return View("Erro", new RespostaViewModel()
+            {
+                NomeView = "Dashboard",
+                Mensagem = "Você não pode acessar esta parte do site"
+            });
         }
     }
 }
