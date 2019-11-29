@@ -8,23 +8,20 @@ namespace McBonaldsMVC.Controllers
     public class AdministradorController : AbstractController
     {
         PedidoRepository pedidoRepository = new PedidoRepository();
-
-        [HttpGet]
-        public IActionResult DashBoard()
+        public IActionResult Dashboard()
         {
             var pedidos = pedidoRepository.ObterTodos();
             DashboardViewModel dashboardViewModel = new DashboardViewModel();
-
+            
             foreach (var pedido in pedidos)
             {
                 switch(pedido.Status)
                 {
-                    case (uint) StatusPedido.REPROVADO:
-                        dashboardViewModel.PedidosReprovados++;
-                        
-                    break;
                     case (uint) StatusPedido.APROVADO:
                         dashboardViewModel.PedidosAprovados++;
+                    break;
+                    case (uint) StatusPedido.REPROVADO:
+                        dashboardViewModel.PedidosReprovados++;
                     break;
                     default:
                         dashboardViewModel.PedidosPendentes++;
@@ -34,6 +31,7 @@ namespace McBonaldsMVC.Controllers
             }
             dashboardViewModel.NomeView = "Dashboard";
             dashboardViewModel.UsuarioEmail = ObterUsuarioSession();
+
             return View(dashboardViewModel);
         }
     }

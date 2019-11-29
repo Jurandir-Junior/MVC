@@ -24,21 +24,22 @@ namespace McBonaldsMVC.Repositories
             return true;            
         }
 
-        public Cliente ObterPor(string email)
+        public Cliente ObterPor (string email)
         {
             var linhas = File.ReadAllLines(PATH);
-            foreach(var linha in linhas)
+            foreach (var item in linhas)
             {
-                if(ExtrairValorDoCampo("email", linha).Equals(email))
+                if(ExtrairValorDoCampo("email", item).Equals(email))
                 {
                     Cliente c = new Cliente();
-                    c.Nome = ExtrairValorDoCampo ("nome", linha);
-                    c.Email = ExtrairValorDoCampo ("email", linha);
-                    c.Senha = ExtrairValorDoCampo ("senha", linha);
-                    c.Endereco = ExtrairValorDoCampo ("endereco", linha);
-                    c.Telefone = ExtrairValorDoCampo ("telefone", linha);
-                    c.DataNascimento = DateTime.Parse(ExtrairValorDoCampo ("data_nascimento", linha));
-                    
+                    c.Nome = ExtrairValorDoCampo("nome", item);
+                    c.Email = ExtrairValorDoCampo("email", item);
+                    c.DataNascimento = 
+                    DateTime.Parse(ExtrairValorDoCampo("data_nascimento", item));
+                    c.Endereco = ExtrairValorDoCampo("endereco", item);
+                    c.Telefone = ExtrairValorDoCampo("telefone", item);
+                    c.Senha = ExtrairValorDoCampo("senha", item);
+
                     return c;
                 }
             }

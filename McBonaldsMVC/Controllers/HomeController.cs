@@ -11,12 +11,14 @@ namespace McBonaldsMVC.Controllers
     public class HomeController : AbstractController
     {
         public IActionResult Index()
-        {    
+        {
+            
             return View(new BaseViewModel()
             {
                 NomeView = "Home",
-                UsuarioNome = ObterUsuarioNomeSession(),
-                UsuarioEmail = ObterUsuarioSession()
+                UsuarioEmail = ObterUsuarioSession(),
+                UsuarioNome = ObterUsuarioNomeSession()
+                
             });
         }
 

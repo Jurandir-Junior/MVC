@@ -11,23 +11,28 @@ namespace McBonaldsMVC.Controllers
         protected string ObterUsuarioSession()
         {
             var email = HttpContext.Session.GetString(SESSION_CLIENTE_EMAIL);
-            if(string.IsNullOrEmpty(email))
+            if (!string.IsNullOrEmpty(email))
             {
                 return email;
-            } else {
+            } 
+            else
+            {
+                return "";
+            }
+        }
+        protected string ObterUsuarioNomeSession()
+        {
+            var nome = HttpContext.Session.GetString(SESSION_CLIENTE_NOME);
+            if (!string.IsNullOrEmpty(nome))
+            {
+                return nome;
+            } 
+            else
+            {
                 return "";
             }
         }
 
-        protected string ObterUsuarioNomeSession()
-        {
-            var nome = HttpContext.Session.GetString(SESSION_CLIENTE_NOME);
-            if(!string.IsNullOrEmpty(nome))
-            {
-                return nome;
-            } else {
-                return "";
-            }
-        }
+        
     }
 }

@@ -1,4 +1,5 @@
 using System;
+using McBonaldsMVC.Enums;
 using McBonaldsMVC.Models;
 using McBonaldsMVC.Repositories;
 using McBonaldsMVC.ViewModels;
@@ -9,52 +10,51 @@ namespace McBonaldsMVC.Controllers {
     public class PedidoController : AbstractController {
         PedidoRepository pedidoRepository = new PedidoRepository ();
         HamburguerRepository hamburguerRepository = new HamburguerRepository();
-
         ShakesRepository shakeRepository = new ShakesRepository();
-
         ClienteRepository clienteRepository = new ClienteRepository();
 
         public IActionResult Index () {
 
-            var hamburgueres = hamburguerRepository.ObterTodos();
-            var shake = shakeRepository.ObterTodos();
-
-            PedidoViewModel pedido = new PedidoViewModel();
-            
-            pedido.Hamburgueres = hamburgueres;
-            pedido.Shake = shake;
+            PedidoViewModel pvm = new PedidoViewModel();
+            pvm.Hamburgueres = hamburguerRepository.ObterTodos();
+            pvm.Shakes = shakeRepository.ObterTodos();
 
             var usuarioLogado = ObterUsuarioSession();
             var nomeUsuarioLogado = ObterUsuarioNomeSession();
-            if(!string.IsNullOrEmpty(nomeUsuarioLogado))
+            if (!string.IsNullOrEmpty(nomeUsuarioLogado))
             {
-                pedido.NomeUsuario = nomeUsuarioLogado;
+                pvm.NomeUsuario = nomeUsuarioLogado;
+            }
+            
+            var clienteLogado = clienteRepository.ObterPor(usuarioLogado);
+            if (clienteLogado != null)
+            {
+                pvm.Cliente = clienteLogado;
             }
 
-            var clienteLogado = clienteRepository.ObterPor(usuarioLogado);
-            if(clienteLogado != null)
-            {
-                pedido.Cliente = clienteLogado;
-            }
-            pedido.NomeView = "Pedido";
-            pedido.UsuarioEmail = ObterUsuarioSession();
-            pedido.UsuarioNome = ObterUsuarioNomeSession();
-            return View (pedido);
+            pvm.NomeView = "Pedido";
+            pvm.UsuarioEmail = usuarioLogado;
+            pvm.UsuarioNome = nomeUsuarioLogado;
+
+            return View (pvm);
         }
 
         public IActionResult Registrar (IFormCollection form) {
             ViewData["Action"] = "Pedido";
             Pedido pedido = new Pedido ();
 
-            
-            var precoShake = shakeRepository.ObterPrecoDe(form["shake"]);
             var nomeShake = form["shake"];
-            Shake shake = new Shake (nomeShake,precoShake);
+            Shake shake = new Shake ();
+            shake.Nome = nomeShake;
+            shake.Preco = shakeRepository.ObterPrecoDe(nomeShake);
 
             pedido.Shake = shake;
 
-            Hamburguer hamburguer = new Hamburguer (form["hamburguer"],hamburguerRepository.ObterPrecoDe(form["hamburguer"]));
-            var precoHamburger = hamburguerRepository.ObterPrecoDe(form["hamburguer"]);
+            var nomeHamburguer = form["hamburguer"];
+            Hamburguer hamburguer = new Hamburguer (
+                nomeHamburguer, 
+                hamburguerRepository.ObterPrecoDe(nomeHamburguer));
+
             pedido.Hamburguer = hamburguer;
 
             Cliente cliente = new Cliente () {
@@ -68,23 +68,23 @@ namespace McBonaldsMVC.Controllers {
 
             pedido.DataDoPedido = DateTime.Now;
 
-            pedido.PrecoTotal = precoHamburger + precoShake;
+            pedido.PrecoTotal = hamburguer.Preco + shake.Preco;
 
             if (pedidoRepository.Inserir (pedido)) {
                 return View ("Sucesso", new RespostaViewModel()
                 {
-                    Mensagem = "Aguarde a aprovação dos nossos administradores",
-                    NomeView = "Sucesso",
+                    NomeView = "Pedido",
                     UsuarioEmail = ObterUsuarioSession(),
                     UsuarioNome = ObterUsuarioNomeSession()
+                    
                 });
             } else {
                 return View ("Erro", new RespostaViewModel()
                 {
-                    Mensagem = "Houve um erro ao processar seu pedido. Tente novamente",
-                    NomeView = "Erro",
+                    NomeView = "Pedido",
                     UsuarioEmail = ObterUsuarioSession(),
                     UsuarioNome = ObterUsuarioNomeSession()
+                    
                 });
             }
         }
@@ -92,6 +92,43 @@ namespace McBonaldsMVC.Controllers {
         public IActionResult Aprovar(ulong id)
         {
             Pedido pedido = pedidoRepository.ObterPor(id);
+            pedido.Status = (uint) StatusPedido.APROVADO;
+
+            if(pedidoRepository.Atualizar(pedido))
+            {
+                return RedirectToAction("Dashboard", "Administrador");
+            }
+            else {
+                return View("Erro", new RespostaViewModel()
+                {
+                    Mensagem = "Houve um erro ao Aprovar pedido.",
+                    NomeView = "Dashboard",
+                    UsuarioEmail = ObterUsuarioSession(),
+                    UsuarioNome = ObterUsuarioNomeSession()
+                    
+                });
+            }
         }
-    }
+
+        public IActionResult Reprovar(ulong id)
+        {
+            Pedido pedido = pedidoRepository.ObterPor(id);
+            pedido.Status = (uint) StatusPedido.REPROVADO;
+
+            if(pedidoRepository.Atualizar(pedido))
+            {
+                return RedirectToAction("Dashboard", "Administrador");
+            }
+            else {
+                return View("Erro", new RespostaViewModel()
+                {
+                    Mensagem = "Houve um erro ao Reprovar pedido.",
+                    NomeView = "Dashboard",
+                    UsuarioEmail = ObterUsuarioSession(),
+                    UsuarioNome = ObterUsuarioNomeSession()
+                    
+                });
+            }
+        }
+    }    
 }

@@ -8,13 +8,13 @@ namespace McBonaldsMVC.Repositories
     {
         private const string PATH = "Database/Hamburguer.csv";
 
-        public double ObterPrecoDe(string nomeHamburger) // pegar os preços e ver se é o preço certo do hamburguer
+        public double ObterPrecoDe(string nomeHamburguer)
         {
             var lista = ObterTodos();
-            double preco = 0.0;
-            foreach(var item in lista)
+            var preco = 0.0;
+            foreach (var item in lista)
             {
-                if(item.Nome.Equals(nomeHamburger))
+                if(item.Nome.Equals(nomeHamburguer))
                 {
                     preco = item.Preco;
                     break;

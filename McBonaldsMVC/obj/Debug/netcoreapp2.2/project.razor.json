@@ -3011,6 +3011,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\51855643855\\Documents\\MVC\\McBonaldsMVC\\Views\\Shared\\Error.cshtml",
+      "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\51855643855\\Documents\\MVC\\McBonaldsMVC\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
