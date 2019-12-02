@@ -6,13 +6,21 @@ namespace RoleTopMVC.Models
     {
         public string Nome {get;set;}
         public string Tipo {get;set;}
-        public DateTime Hora {get;set;}
+        public DateTime HoraInicio {get;set;}
+        public DateTime HoraFim {get;set;}
+        public DateTime Dia {get;set;}
         public string Descricao {get;set;}
 
-        public Evento(string nome, string tipo, DateTime hora, string descricao){
+        public Evento()
+        {
+            
+        }
+        public Evento(string nome, string tipo, DateTime horaInicio, DateTime horaFim, DateTime dia, string descricao){
             this.Nome = nome;
             this.Tipo = tipo;
-            this.Hora = hora;
+            this.HoraInicio = horaInicio;
+            this.HoraFim = horaFim;
+            this.Dia = dia;
             this.Descricao = descricao;
         }
     }
