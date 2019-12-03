@@ -11,6 +11,7 @@ namespace RoleTopMVC.Models
         public string Endereco {get; set;}
         public string Telefone {get; set;}
         public DateTime DataNascimento {get; set;}
+        public uint TipoUsuario {get;set;}
     
 
         public Cliente()

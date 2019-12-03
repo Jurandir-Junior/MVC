@@ -16,7 +16,7 @@ namespace RoleTopMVC.Repositories
             {
                 Evento e = new Evento();
                 string dados = linha;
-                e.Tipo = dados;
+                e.TipoEvento = dados;
                 eventos.Add(e);
             }
             return eventos;

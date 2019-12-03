@@ -11,7 +11,7 @@ namespace McBonaldsMVC.Controllers
     {
 
         private ClienteRepository clienteRepository = new ClienteRepository();
-        private PedidoRepository pedidoRepository = new PedidoRepository();
+        private PedidoRepository pedidoRepository = new PedidoRepository(); 
 
         [HttpGet]
         public IActionResult Login()
@@ -57,7 +57,7 @@ namespace McBonaldsMVC.Controllers
                             HttpContext.Session.SetString(SESSION_TIPO_USUARIO, cliente.TipoUsuario.ToString());
                             return RedirectToAction("Dashboard","Administrador");
                     }
-                    }
+                    }   
                     else 
                     {
                         return View("Erro", new RespostaViewModel("Senha incorreta"));

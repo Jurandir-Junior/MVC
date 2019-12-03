@@ -6,7 +6,7 @@ using RoleTopMVC.Repositories;
 
 namespace RoleTopMVC.Controllers
 {
-    public class CadastroController : Controller
+    public class CadastroController : AbstractController
     {
         ClienteRepository clienteRepositorio = new ClienteRepository();
         public IActionResult Index()

@@ -1,1 +1,1 @@
-id=1;status_pedido=0;cliente_nome=;cliente_endereco=;cliente_telefone=;cliente_email=;evento_nome=;evento_tipo=;evento_data=01/01/0001 00:00:00;data_pedido=02/12/2019 11:04:47
+id=1;status_pedido=0;cliente_nome=Junior;cliente_telefone=11 1234-5678;cliente_email=juno@email.com;evento_nome=Aniversário do Juno;evento_tipo=Aniversário;evento_data=26/01/2020 00:00:00;evento_horaInicio=03/12/2019 12:30:00;evento_horaFim=03/12/2019 15:00:00;data_pedido=03/12/2019 08:03:53

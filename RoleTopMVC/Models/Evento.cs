@@ -4,8 +4,8 @@ namespace RoleTopMVC.Models
 {
     public class Evento
     {
-        public string Nome {get;set;}
-        public string Tipo {get;set;}
+        public string NomeEvento {get;set;}
+        public string TipoEvento {get;set;}
         public DateTime HoraInicio {get;set;}
         public DateTime HoraFim {get;set;}
         public DateTime Dia {get;set;}
@@ -15,9 +15,9 @@ namespace RoleTopMVC.Models
         {
             
         }
-        public Evento(string nome, string tipo, DateTime horaInicio, DateTime horaFim, DateTime dia, string descricao){
-            this.Nome = nome;
-            this.Tipo = tipo;
+        public Evento(string nomeEvento, string tipoEvento, DateTime horaInicio, DateTime horaFim, DateTime dia, string descricao){
+            this.NomeEvento = nomeEvento;
+            this.TipoEvento = tipoEvento;
             this.HoraInicio = horaInicio;
             this.HoraFim = horaFim;
             this.Dia = dia;

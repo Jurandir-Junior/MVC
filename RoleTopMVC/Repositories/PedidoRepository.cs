@@ -57,12 +57,13 @@ namespace RoleTopMVC.Repositories
                 pedido.Id = ulong.Parse(ExtrairValorDoCampo("id", linha));
                 pedido.Status = uint.Parse(ExtrairValorDoCampo("status_pedido", linha));
                 pedido.Cliente.Nome = ExtrairValorDoCampo("cliente_nome", linha);
-                pedido.Cliente.Endereco = ExtrairValorDoCampo("cliente_endereco",linha);
                 pedido.Cliente.Telefone = ExtrairValorDoCampo("cliente_telefone", linha);
                 pedido.Cliente.Email = ExtrairValorDoCampo("cliente_email", linha);
-                pedido.Evento.Nome = ExtrairValorDoCampo("evento_nome", linha);
-                pedido.Evento.Tipo = ExtrairValorDoCampo("evento_tipo", linha);
+                pedido.Evento.NomeEvento = ExtrairValorDoCampo("evento_nome", linha);
+                pedido.Evento.TipoEvento = ExtrairValorDoCampo("evento_tipo", linha);
                 pedido.Evento.Dia = DateTime.Parse(ExtrairValorDoCampo("evento_data", linha));
+                pedido.Evento.HoraInicio = DateTime.Parse(ExtrairValorDoCampo("evento_horaInicio", linha));
+                pedido.Evento.HoraFim = DateTime.Parse(ExtrairValorDoCampo("evento_horaFim", linha));
                 pedido.DataDoPedido = DateTime.Parse(ExtrairValorDoCampo("data_pedido", linha));
 
                 pedidos.Add(pedido);
@@ -93,10 +94,10 @@ namespace RoleTopMVC.Repositories
         }
 
         private string PrepararPedidoCSV(Pedido pedido){
-            Cliente c = new Cliente();
-            Evento e = new Evento();
+            Cliente c = pedido.Cliente;
+            Evento e = pedido.Evento;
 
-            return $"id={pedido.Id};status_pedido={pedido.Status};cliente_nome={c.Nome};cliente_endereco={c.Endereco};cliente_telefone={c.Telefone};cliente_email={c.Email};evento_nome={e.Nome};evento_tipo={e.Tipo};evento_data={e.Dia};data_pedido={pedido.DataDoPedido}";
+            return $"id={pedido.Id};status_pedido={pedido.Status};cliente_nome={c.Nome};cliente_telefone={c.Telefone};cliente_email={c.Email};evento_nome={e.NomeEvento};evento_tipo={e.TipoEvento};evento_data={e.Dia};evento_horaInicio={e.HoraInicio};evento_horaFim={e.HoraFim};data_pedido={pedido.DataDoPedido}";
         }
     }
 }

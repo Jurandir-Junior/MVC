@@ -1,12 +1,19 @@
 using Microsoft.AspNetCore.Mvc;
+using RoleTopMVC.ViewModels;
 
 namespace RoleTopMVC.Controllers
 {
-    public class LocalController : Controller
+    public class LocalController : AbstractController
     {
         public IActionResult Index()
         {
-            return View();
+            return View(new BaseViewModel()
+            {
+                NomeView = "Local",
+                UsuarioEmail = ObterUsuarioSession(),
+                UsuarioNome = ObterUsuarioNomeSession()
+                
+            });
         }
     }
 }

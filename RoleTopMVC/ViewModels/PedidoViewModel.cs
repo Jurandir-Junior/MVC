@@ -3,7 +3,7 @@ using RoleTopMVC.Models;
 
 namespace RoleTopMVC.ViewModels
 {
-    public class PedidoViewModel
+    public class PedidoViewModel : BaseViewModel
     {
         public List<Evento> Eventos {get;set;}
         public string NomeUsuario {get;set;}

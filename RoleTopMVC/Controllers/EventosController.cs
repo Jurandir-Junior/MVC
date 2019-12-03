@@ -1,12 +1,19 @@
 using Microsoft.AspNetCore.Mvc;
+using RoleTopMVC.ViewModels;
 
 namespace RoleTopMVC.Controllers
 {
-    public class EventosController : Controller
+    public class EventosController : AbstractController
     {
         public IActionResult Index()
         {
-            return View();
+            return View(new BaseViewModel()
+            {
+                NomeView = "Eventos",
+                UsuarioEmail = ObterUsuarioSession(),
+                UsuarioNome = ObterUsuarioNomeSession()
+                
+            });
         }
     }
 }
