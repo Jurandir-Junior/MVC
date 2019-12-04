@@ -100,3 +100,5 @@ C:\Users\51855643855\Documents\MVC\RoleTopMVC\obj\Debug\netcoreapp2.2\Razor\View
 C:\Users\51855643855\Documents\MVC\RoleTopMVC\obj\Debug\netcoreapp2.2\Razor\Views\Pedido\Index.g.cshtml.cs
 C:\Users\51855643855\Documents\MVC\RoleTopMVC\obj\Debug\netcoreapp2.2\Razor\Views\Eventos\Index.g.cshtml.cs
 C:\Users\51855643855\Documents\MVC\RoleTopMVC\obj\Debug\netcoreapp2.2\Razor\Views\Local\Index.g.cshtml.cs
+C:\Users\51855643855\Documents\MVC\RoleTopMVC\obj\Debug\netcoreapp2.2\Razor\Views\Administrador\Dashboard.g.cshtml.cs
+C:\Users\51855643855\Documents\MVC\RoleTopMVC\obj\Debug\netcoreapp2.2\Razor\Views\Cliente\Historico.g.cshtml.cs

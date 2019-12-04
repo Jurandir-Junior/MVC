@@ -15,12 +15,27 @@
             <section id="logo-area">
                     <div class="topo">
                         <ul>
+                            @if(string.IsNullOrEmpty(@Model.UsuarioEmail))
+                            {
                             <li class="bem-vindo">Bem-vindo(a)</li>
+                            } else
+                            {
+                                <li class="bem-vindo">Bem-vindo(a) @Model.UsuarioNome</li>
+                            }
                             <li class="logon">
                                 <ul id="cadastro">
-                                    <li><a asp-controller="Cadastro" asp-action="Index" class="button7">Cadastro</a></li>
-                                    <li id="login"><a asp-controller="Cliente" asp-action="Login" class="button8">Login</a></li>
-                                </ul></li>
+                                    @if(string.IsNullOrEmpty(@Model.UsuarioEmail))
+                                    {
+                                        <li><a asp-controller="Cadastro" asp-action="Index" class="button7">Cadastro</a></li>
+                                        <li id="login"><a asp-controller="Cliente" asp-action="Login" class="button8">Login</a></li>
+                                    } else 
+                                    {
+                                        <li><a asp-controller="Cliente" asp-action="Historico" class="button7">Historico</a></li>
+                                        <li id="login"><a asp-controller="Cliente" asp-action="Logoff" class="button8">Logoff</a></li>
+                                    }
+                                </ul>
+                            </li>
+                                    
                         </ul>            
                         <img id="logo" src="~/img/logo.png" title="Logo Rolê Top">
                     </div>            

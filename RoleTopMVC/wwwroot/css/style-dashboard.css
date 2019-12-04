@@ -1,0 +1,106 @@
+body {
+    background-color: #21003F;
+}
+
+#painel {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 100px 0 100px;
+}
+
+h2 {
+    padding-top: 40px;
+    font-size: 1.8em;
+    text-align: center;
+    color: white;
+}
+
+h3 {
+    padding: 0.5em 0;
+    font-size: 1.3em;
+    text-align: center;
+    color: #361a0c;
+    text-shadow: 
+    -1px -1px 0 #fff,
+    1px -1px 0 #fff,
+    -1px  1px 0 #fff,
+    1px  1px 0 #fff;
+}
+
+h4 {
+    font-size: 2em;
+    font-family: 'Fredoka One', cursive;
+}
+
+.box-status-pedidos {
+    width: 30%;
+    padding-top: .5em;
+    text-align: center;
+}
+.box-status-pedidos > p {
+    font-size: 2em;
+    padding: 0.5em 0 0 0;
+}
+
+.box-status-pedidos.reprovados {
+    background-color: #a70000;
+}
+
+.box-status-pedidos.aprovados {
+    background-color: #669100;
+}
+
+.box-status-pedidos.pendentes {
+    background-color: #ff9933;
+}
+
+table {
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    padding: 5px 100px 5px 100px;
+    word-break: normal;
+}
+
+table th {
+    background-color:#801D6B;
+}
+
+table a {
+    text-decoration: none;
+    color: #ff9933;
+}
+
+table a:hover {
+    text-decoration: underline;
+}
+
+tfoot td {
+    text-align: center;
+    color: white;
+    background-color: #801D6B;
+}
+
+thead > tr:first-child > th:last-child {
+    padding: 0 .5em;
+}
+
+.aceitar{
+    color: green;
+}
+
+.recusar{
+    color: red;
+}
+
+@media (max-width: 625px) {
+    main {
+        width: 90%;
+    }
+
+    h4 {
+        font-size: 1em;
+    }
+
+
+}

@@ -1,0 +1,28 @@
+@{
+    ViewData["Title"] = "Pedidos - RoleTop";
+    ViewData["H2"] = "Histórico de Pedidos";
+}
+<head>
+    <link href="~/css/style-dashboard.css" type="text/css" rel="stylesheet"/>
+</head>
+<main>
+    <h2>@ViewData["H2"]</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Data</th>
+                <th>Evento</th>
+                <th>Tipo</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var pedido in Model.Pedidos){
+                <tr>
+                    <td>@pedido.DataDoPedido</td>
+                    <td>@pedido.Evento.NomeEvento</td>
+                    <td>@pedido.Evento.TipoEvento</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</main>
