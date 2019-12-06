@@ -40,6 +40,10 @@ main {
     padding: 10px 5px;
 }
 
+#lista > div > select {
+    padding: 5px;
+}
+
 input {
     padding: 5px;
 }
