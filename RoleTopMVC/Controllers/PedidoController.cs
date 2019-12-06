@@ -46,7 +46,6 @@ namespace RoleTopMVC.Controllers
             evento.NomeEvento = nomeEvento;
             evento.TipoEvento = form["tipoEvento"];
             evento.Dia = DateTime.Parse(form["dia"]);
-            evento.HoraInicio = DateTime.Parse(form["horaInicio"]);
             evento.HoraFim = DateTime.Parse(form["horaFim"]);
             evento.Descricao = form["descricao"];
 

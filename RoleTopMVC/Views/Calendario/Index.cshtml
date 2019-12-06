@@ -1,0 +1,38 @@
+@model RoleTopMVC.ViewModels.CalendarioViewModel
+<head>
+    <link href="~/css/style-calendario.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+    <main>
+        <h2>Calendário</h2>
+        <section id="pedidos-agendados">
+            <h3>Eventos Agendados</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th rowspan="2">Evento</th>
+                        <th rowspan="2">Tipo</th>
+                        <th rowspan="2">Data</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">
+                            <p>Pedidos atualizados em @DateTime.Now</p>
+                        </td>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    @foreach(var pedido in Model.PedidosA)
+                    {
+                        <tr>
+                            <td>@pedido.Evento.NomeEvento</td>
+                            <td>@pedido.Evento.TipoEvento</td>
+                            <td>@pedido.Evento.Dia</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>

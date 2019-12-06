@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using RoleTopMVC.Models;
 using RoleTopMVC.Repositories;
+using RoleTopMVC.ViewModels;
 
 namespace RoleTopMVC.Controllers
 {
@@ -11,7 +12,11 @@ namespace RoleTopMVC.Controllers
         ClienteRepository clienteRepositorio = new ClienteRepository();
         public IActionResult Index()
         {
-            return View();
+            return View(new BaseViewModel(){
+                NomeView = "Cadastro",
+                UsuarioEmail = ObterUsuarioSession(),
+                UsuarioNome = ObterUsuarioNomeSession()
+            });
         }
 
         public IActionResult CadastrarCliente(IFormCollection form)

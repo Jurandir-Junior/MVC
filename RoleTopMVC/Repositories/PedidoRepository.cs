@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using RoleTopMVC.Enums;
 using RoleTopMVC.Models;
 
 namespace RoleTopMVC.Repositories
@@ -61,14 +62,24 @@ namespace RoleTopMVC.Repositories
                 pedido.Cliente.Email = ExtrairValorDoCampo("cliente_email", linha);
                 pedido.Evento.NomeEvento = ExtrairValorDoCampo("evento_nome", linha);
                 pedido.Evento.TipoEvento = ExtrairValorDoCampo("evento_tipo", linha);
-                pedido.Evento.Dia = DateTime.Parse(ExtrairValorDoCampo("evento_data", linha));
-                pedido.Evento.HoraInicio = DateTime.Parse(ExtrairValorDoCampo("evento_horaInicio", linha));
-                pedido.Evento.HoraFim = DateTime.Parse(ExtrairValorDoCampo("evento_horaFim", linha));
+                pedido.Evento.Dia = DateTime.Parse(ExtrairValorDoCampo("evento_inicio", linha));
+                pedido.Evento.HoraFim = DateTime.Parse(ExtrairValorDoCampo("evento_fim", linha));
                 pedido.DataDoPedido = DateTime.Parse(ExtrairValorDoCampo("data_pedido", linha));
 
                 pedidos.Add(pedido);
             }
             return pedidos;
+        }
+
+        public List<Pedido> ObterAprovados(){
+            var aprovados = ObterTodos();
+            List<Pedido> pedidosA = new List<Pedido>();
+            foreach(var pedido in aprovados){
+                if(pedido.Status == 1){
+                    pedidosA.Add(pedido);
+                }
+            }
+            return pedidosA;
         }
 
         public bool Atualizar(Pedido pedido){
@@ -97,7 +108,7 @@ namespace RoleTopMVC.Repositories
             Cliente c = pedido.Cliente;
             Evento e = pedido.Evento;
 
-            return $"id={pedido.Id};status_pedido={pedido.Status};cliente_nome={c.Nome};cliente_telefone={c.Telefone};cliente_email={c.Email};evento_nome={e.NomeEvento};evento_tipo={e.TipoEvento};evento_data={e.Dia};evento_horaInicio={e.HoraInicio};evento_horaFim={e.HoraFim};data_pedido={pedido.DataDoPedido}";
+            return $"id={pedido.Id};status_pedido={pedido.Status};cliente_nome={c.Nome};cliente_telefone={c.Telefone};cliente_email={c.Email};evento_nome={e.NomeEvento};evento_tipo={e.TipoEvento};evento_inicio={e.Dia};evento_fim={e.HoraFim};data_pedido={pedido.DataDoPedido}";
         }
     }
 }
